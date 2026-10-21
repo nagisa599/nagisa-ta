@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>朝活アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Good morning</p>
+          <h1>朝活アプリ</h1>
+        </div>
+        <div class="date-box" id="todayDate"></div>
+      </header>
+
+      <main class="dashboard">
+        <section class="card hero-card">
+          <div>
+            <p class="label">今日の目標</p>
+            <h2 id="goalText">集中して1歩前へ進もう</h2>
+          </div>
+          <button id="goalChangeBtn" class="secondary-btn">目標を変える</button>
+        </section>
+
+        <section class="card timer-card">
+          <div class="timer-header">
+            <p class="label">集中タイマー</p>
+            <span id="timerMode">朝活モード</span>
+          </div>
+
+          <div class="timer-wrap">
+            <div class="timer-circle" id="timerCircle">
+              <div class="timer-inner">
+                <span id="timeDisplay">25:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timer-actions">
+            <button id="startBtn" class="primary-btn">開始</button>
+            <button id="pauseBtn" class="ghost-btn">一時停止</button>
+            <button id="resetBtn" class="ghost-btn">リセット</button>
+          </div>
+        </section>
+
+        <section class="card tasks-card">
+          <div class="section-head">
+            <p class="label">今日のタスク</p>
+            <span id="taskProgress">0 / 0</span>
+          </div>
+
+          <form id="taskForm" class="task-form">
+            <input type="text" id="taskInput" placeholder="例: 10分間読書" maxlength="40" />
+            <button type="submit" class="primary-btn small-btn">追加</button>
+          </form>
+
+          <ul id="taskList" class="task-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
